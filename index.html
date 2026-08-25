@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rosas 5K">
+<meta name="theme-color" content="#2a78d6">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Rosas 5K Coach</title>
+<style>
+  :root{
+    color-scheme: light;
+    --surface-1:#fcfcfb;
+    --page:#f9f9f7;
+    --text-primary:#0b0b0b;
+    --text-secondary:#52514e;
+    --muted:#898781;
+    --gridline:#e1e0d9;
+    --border:rgba(11,11,11,0.10);
+    --blue:#2a78d6;
+    --orange:#eb6834;
+    --aqua:#1baf7a;
+    --good:#0ca30c;
+    --warning:#c98500;
+    --critical:#d03b3b;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])){
+      color-scheme: dark;
+      --surface-1:#1a1a19;
+      --page:#0d0d0d;
+      --text-primary:#ffffff;
+      --text-secondary:#c3c2b7;
+      --muted:#898781;
+      --gridline:#2c2c2a;
+      --border:rgba(255,255,255,0.10);
+      --blue:#3987e5;
+      --orange:#d95926;
+      --aqua:#199e70;
+      --good:#0ca30c;
+      --warning:#c98500;
+      --critical:#e66767;
+    }
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
+  html,body{height:100%;}
+  body{
+    margin:0; font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    background:var(--page); color:var(--text-primary);
+    -webkit-user-select:none; user-select:none;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  #app{ max-width:480px; margin:0 auto; min-height:100vh; display:flex; flex-direction:column; }
+  .topbar{
+    display:flex; align-items:center; gap:8px; padding:14px 16px 10px;
+    position:sticky; top:0; background:var(--page); z-index:5;
+  }
+  .topbar h1{ font-size:18px; margin:0; flex:1; }
+  .back-btn{ background:none;border:none;color:var(--blue); font-size:15px; font-weight:600; padding:6px 0; }
+  main{ flex:1; padding:4px 16px 90px; }
+  .card{
+    background:var(--surface-1); border:1px solid var(--border); border-radius:16px;
+    padding:16px; margin-bottom:14px;
+  }
+  .hero-days{ font-size:44px; font-weight:700; line-height:1; letter-spacing:-0.02em; }
+  .hero-sub{ color:var(--text-secondary); font-size:13px; margin-top:4px; }
+  .row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  h2{ font-size:15px; margin:18px 0 8px; color:var(--text-secondary); text-transform:uppercase; letter-spacing:.04em; font-weight:600; }
+  p{ line-height:1.45; font-size:14.5px; color:var(--text-secondary); margin:6px 0; }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:6px;
+    border-radius:12px; padding:13px 18px; font-size:15.5px; font-weight:600;
+    border:none; cursor:pointer; width:100%;
+  }
+  .btn-primary{ background:var(--blue); color:#fff; }
+  .btn-secondary{ background:var(--gridline); color:var(--text-primary); }
+  .btn-orange{ background:var(--orange); color:#fff; }
+  .btn-ghost{ background:transparent; color:var(--blue); }
+  .btn-sm{ width:auto; padding:8px 14px; font-size:13.5px; }
+  .progress-track{ height:8px; background:var(--gridline); border-radius:99px; overflow:hidden; }
+  .progress-fill{ height:100%; background:var(--blue); border-radius:99px; transition:width .3s; }
+  .pill{ font-size:11.5px; font-weight:700; padding:4px 9px; border-radius:99px; white-space:nowrap; }
+  .pill-done{ background:rgba(12,163,12,0.14); color:var(--good); }
+  .pill-today{ background:rgba(42,120,214,0.14); color:var(--blue); }
+  .pill-upcoming{ background:var(--gridline); color:var(--muted); }
+  .pill-missed{ background:rgba(208,59,59,0.12); color:var(--critical); }
+  .session-row{ display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid var(--gridline); }
+  .session-row:last-child{ border-bottom:none; }
+  .session-date{ width:52px; flex-shrink:0; text-align:center; }
+  .session-date .d{ font-size:19px; font-weight:700; line-height:1; }
+  .session-date .m{ font-size:11px; color:var(--muted); text-transform:uppercase; }
+  .session-info{ flex:1; min-width:0; }
+  .session-title{ font-size:14.5px; font-weight:600; }
+  .session-label{ font-size:12.5px; color:var(--text-secondary); }
+  .check{
+    width:26px;height:26px;border-radius:50%; border:2px solid var(--gridline);
+    display:flex;align-items:center;justify-content:center; flex-shrink:0; font-size:14px; color:#fff;
+  }
+  .check.on{ background:var(--good); border-color:var(--good); }
+  .week-header{ font-size:12.5px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin:16px 4px 4px; }
+  .bottom-nav{
+    position:fixed; bottom:0; left:0; right:0; display:flex; justify-content:center;
+    background:var(--surface-1); border-top:1px solid var(--border);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-nav-inner{ max-width:480px; width:100%; display:flex; }
+  .nav-item{
+    flex:1; text-align:center; padding:9px 0 8px; background:none; border:none; color:var(--muted);
+    font-size:11px; font-weight:600; display:flex; flex-direction:column; align-items:center; gap:3px;
+  }
+  .nav-item.active{ color:var(--blue); }
+  .nav-ic{ font-size:19px; }
+  .banner{
+    background:rgba(42,120,214,0.10); border:1px solid rgba(42,120,214,0.25); border-radius:14px;
+    padding:12px 14px; font-size:13px; color:var(--text-primary); margin-bottom:14px; position:relative;
+  }
+  .banner .close{ position:absolute; top:8px; right:10px; background:none;border:none;color:var(--muted); font-size:15px; }
+  .toggle{ width:46px; height:27px; border-radius:99px; background:var(--gridline); position:relative; border:none; flex-shrink:0; }
+  .toggle.on{ background:var(--blue); }
+  .toggle .knob{ position:absolute; top:2px; left:2px; width:23px; height:23px; border-radius:50%; background:#fff; transition:left .15s; }
+  .toggle.on .knob{ left:21px; }
+  .level-badge{ display:inline-block; padding:3px 10px; border-radius:8px; background:rgba(42,120,214,.12); color:var(--blue); font-weight:700; font-size:13px; }
+
+  /* Full-screen workout view */
+  .workout-screen{ position:fixed; inset:0; z-index:20; display:flex; flex-direction:column; background:var(--page); }
+  .workout-screen.run{ background:var(--orange); }
+  .workout-screen.walk{ background:var(--blue); }
+  .workout-screen.idle{ background:var(--page); }
+  .wk-top{ display:flex; justify-content:space-between; align-items:center; padding:calc(env(safe-area-inset-top) + 14px) 18px 6px; }
+  .wk-top button{ background:rgba(255,255,255,0.25); border:none; color:#fff; border-radius:99px; padding:7px 13px; font-size:13px; font-weight:600; }
+  .wk-top.idle-top button{ background:var(--gridline); color:var(--text-primary); }
+  .wk-top .wk-title{ color:#fff; font-weight:700; font-size:14px; }
+  .wk-top.idle-top .wk-title{ color:var(--text-primary); }
+  .wk-body{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 24px; }
+  .wk-phase-label{ color:#fff; font-size:20px; font-weight:700; letter-spacing:.02em; margin-bottom:6px; }
+  .wk-timer{ color:#fff; font-size:76px; font-weight:700; letter-spacing:-0.02em; font-variant-numeric:tabular-nums; }
+  .wk-next{ color:rgba(255,255,255,0.85); font-size:14px; margin-top:10px; }
+  .wk-dots{ display:flex; gap:6px; margin-top:22px; flex-wrap:wrap; justify-content:center; max-width:260px; }
+  .wk-dot{ width:9px;height:9px;border-radius:50%; background:rgba(255,255,255,0.35); }
+  .wk-dot.done{ background:#fff; }
+  .wk-controls{ display:flex; gap:12px; padding:20px 24px calc(env(safe-area-inset-bottom) + 20px); }
+  .wk-controls button{ flex:1; padding:15px; border-radius:14px; border:none; font-size:15px; font-weight:700; background:rgba(255,255,255,0.22); color:#fff; }
+  .wk-controls button.stop{ background:rgba(255,255,255,0.9); color:#111; }
+  .idle .wk-phase-label, .idle .wk-timer, .idle .wk-next{ color:var(--text-primary); }
+  .idle .wk-controls button{ background:var(--blue); color:#fff; }
+  .stopwatch-hint{ color:rgba(255,255,255,0.85); font-size:13.5px; margin-top:14px; max-width:280px; }
+  a{ color: var(--blue); }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+/* ---------------------------------------------------------------
+   RACE + PLAN DATA
+--------------------------------------------------------------- */
+const RACE_DATE = '2026-09-27';
+const RACE_LABEL = 'Carrera de las Rosas · Medellín';
+
+// Progressive run/walk template. Index = difficulty step.
+const TEMPLATE = [
+  {run:60,  walk:90,  reps:8, label:'Corre 1:00 / Camina 1:30 × 8'},
+  {run:90,  walk:90,  reps:7, label:'Corre 1:30 / Camina 1:30 × 7'},
+  {run:180, walk:120, reps:5, label:'Corre 3:00 / Camina 2:00 × 5'},
+  {run:300, walk:180, reps:4, label:'Corre 5:00 / Camina 3:00 × 4'},
+  {run:480, walk:180, reps:3, label:'Corre 8:00 / Camina 3:00 × 3'},
+  {run:600, walk:180, reps:2, label:'Corre 10:00 / Camina 3:00 × 2'},
+  {run:900, walk:120, reps:2, label:'Corre 15:00 / Camina 2:00 × 2'},
+  {run:1500,walk:0,   reps:1, label:'Corre 25:00 continuo'}
+];
+const SHAKEOUT = {run:180, walk:120, reps:2, label:'Trote suave: Corre 3:00 / Camina 2:00 × 2'};
+
+// date, week, kind, offset (template index relative to level), repsAdj
+const SESSION_META = [
+  {id:1,  date:'2026-08-18', week:0, kind:'baseline'},
+  {id:2,  date:'2026-08-20', week:0, kind:'tpl', off:0},
+  {id:3,  date:'2026-08-22', week:0, kind:'tpl', off:0},
+  {id:4,  date:'2026-08-25', week:1, kind:'tpl', off:1},
+  {id:5,  date:'2026-08-27', week:1, kind:'tpl', off:1},
+  {id:6,  date:'2026-08-29', week:1, kind:'tpl', off:1},
+  {id:7,  date:'2026-09-01', week:2, kind:'tpl', off:2},
+  {id:8,  date:'2026-09-03', week:2, kind:'tpl', off:2},
+  {id:9,  date:'2026-09-05', week:2, kind:'tpl', off:2},
+  {id:10, date:'2026-09-08', week:3, kind:'tpl', off:3},
+  {id:11, date:'2026-09-10', week:3, kind:'tpl', off:3},
+  {id:12, date:'2026-09-12', week:3, kind:'tpl', off:3},
+  {id:13, date:'2026-09-15', week:4, kind:'tpl', off:4},
+  {id:14, date:'2026-09-17', week:4, kind:'tpl', off:4},
+  {id:15, date:'2026-09-19', week:4, kind:'tpl', off:4},
+  {id:16, date:'2026-09-22', week:5, kind:'tpl', off:4, repsAdj:-1},
+  {id:17, date:'2026-09-24', week:5, kind:'tpl', off:3},
+  {id:18, date:'2026-09-26', week:5, kind:'shakeout'},
+];
+const WEEK_LABELS = {0:'Semana 0 · Prueba y arranque',1:'Semana 1',2:'Semana 2',3:'Semana 3',4:'Semana 4',5:'Semana 5 · Afinar (taper)'};
+
+function levelFromSeconds(sec){
+  if(sec <= 75) return 0;
+  if(sec <= 240) return 1;
+  return 2;
+}
+function levelLabel(level){
+  return ['Nivel 1 · Empezamos desde cero','Nivel 2 · Ya tienes una base','Nivel 3 · Vas adelantado'][level];
+}
+function workoutFor(meta, level){
+  if(meta.kind==='shakeout') return SHAKEOUT;
+  if(meta.kind==='baseline'){
+    return {run:0, walk:0, reps:0, label: state.baselineSeconds!=null
+      ? ('Resultado: '+fmtMinSec(state.baselineSeconds)+' corriendo seguido')
+      : 'Camina 5 min → trota a tu ritmo → camina 5 min'};
+  }
+  const idx = Math.min(TEMPLATE.length-1, level + meta.off);
+  const base = TEMPLATE[idx];
+  if(meta.repsAdj){
+    return {...base, reps: Math.max(1, base.reps + meta.repsAdj), label: base.label.replace(/×\s*\d+/, '× '+Math.max(1, base.reps+meta.repsAdj))};
+  }
+  return base;
+}
+
+/* ---------------------------------------------------------------
+   STATE (persisted to localStorage when available)
+--------------------------------------------------------------- */
+const STORE_KEY = 'rosas5k_state_v1';
+let mem = {};
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    if(raw) return JSON.parse(raw);
+  }catch(e){}
+  return null;
+}
+function saveState(){
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){ mem = state; }
+}
+let state = loadState() || {
+  baselineSeconds: null,
+  level: null,
+  completed: {},        // sessionId -> true
+  soundOn: true,
+  bannerDismissed: false
+};
+
+function todayStr(){
+  const d = new Date(); d.setHours(0,0,0,0);
+  return d.toISOString().slice(0,10);
+}
+function parseLocal(dstr){
+  const [y,m,d] = dstr.split('-').map(Number);
+  return new Date(y, m-1, d);
+}
+function daysBetween(a,b){
+  return Math.round((parseLocal(b) - parseLocal(a)) / 86400000);
+}
+const WEEKDAY = ['dom','lun','mar','mié','jue','vie','sáb'];
+const MONTH = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+
+/* ---------------------------------------------------------------
+   AUDIO / HAPTICS / WAKE LOCK
+--------------------------------------------------------------- */
+let audioCtx = null;
+function tone(freq, dur, vol){
+  if(!state.soundOn) return;
+  try{
+    if(!audioCtx) audioCtx = new (window.AudioContext||window.webkitAudioContext)();
+    if(audioCtx.state === 'suspended') audioCtx.resume();
+    const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+    o.type='sine'; o.frequency.value=freq; g.gain.value = vol||0.18;
+    o.connect(g); g.connect(audioCtx.destination);
+    o.start();
+    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
+    o.stop(audioCtx.currentTime + dur + 0.02);
+  }catch(e){}
+}
+function cueRun(){ tone(880,0.15); setTimeout(()=>tone(1180,0.22),150); vib([120,60,120]); }
+function cueWalk(){ tone(440,0.28); vib(150); }
+function cueTick(){ tone(700,0.07,0.12); }
+function cueDone(){ tone(700,0.15); setTimeout(()=>tone(950,0.15),160); setTimeout(()=>tone(1250,0.3),320); }
+function vib(pattern){ try{ if(navigator.vibrate) navigator.vibrate(pattern); }catch(e){} }
+
+let wakeLock = null;
+async function requestWakeLock(){
+  try{ if('wakeLock' in navigator){ wakeLock = await navigator.wakeLock.request('screen'); } }catch(e){}
+}
+function releaseWakeLock(){ try{ wakeLock && wakeLock.release(); }catch(e){} wakeLock=null; }
+document.addEventListener('visibilitychange', ()=>{
+  if(document.visibilityState==='visible' && view==='workout') requestWakeLock();
+});
+
+/* ---------------------------------------------------------------
+   NAVIGATION
+--------------------------------------------------------------- */
+let view = 'home';         // home | plan | settings | baseline | workout
+let activeSessionId = null;
+let engine = null;         // workout engine instance
+
+function go(v){ view = v; render(); window.scrollTo(0,0); }
+
+/* ---------------------------------------------------------------
+   PLAN HELPERS
+--------------------------------------------------------------- */
+function fullPlan(){
+  const level = state.level==null ? 1 : state.level;
+  return SESSION_META.map(m=>({...m, workout: workoutFor(m, level)}));
+}
+function nextSession(){
+  const plan = fullPlan();
+  return plan.find(s => !state.completed[s.id]) || null;
+}
+function sessionStatus(s){
+  if(state.completed[s.id]) return 'done';
+  const t = todayStr();
+  if(s.date === t) return 'today';
+  if(daysBetween(t, s.date) < 0) return 'missed';
+  return 'upcoming';
+}
+function completedCount(){ return Object.keys(state.completed).length; }
+
+/* ---------------------------------------------------------------
+   RENDER: SHELL
+--------------------------------------------------------------- */
+function render(){
+  const app = document.getElementById('app');
+  if(view==='workout'){ app.innerHTML = renderWorkout(); return; }
+  if(view==='baseline'){ app.innerHTML = renderBaseline(); return; }
+
+  let title = {home:'Rosas 5K Coach', plan:'Tu plan', settings:'Ajustes'}[view];
+  app.innerHTML = `
+    <div class="topbar"><h1>${title}</h1></div>
+    <main>${view==='home'?renderHome(): view==='plan'?renderPlan(): renderSettings()}</main>
+    <nav class="bottom-nav"><div class="bottom-nav-inner">
+      ${navItem('home','🏠','Inicio')}
+      ${navItem('plan','📅','Plan')}
+      ${navItem('settings','⚙️','Ajustes')}
+    </div></nav>
+  `;
+}
+function navItem(v, icon, label){
+  return `<button class="nav-item ${view===v?'active':''}" onclick="go('${v}')">
+    <span class="nav-ic">${icon}</span>${label}</button>`;
+}
+
+/* ---------------------------------------------------------------
+   RENDER: HOME
+--------------------------------------------------------------- */
+function renderHome(){
+  const days = daysBetween(todayStr(), RACE_DATE);
+  const total = SESSION_META.length;
+  const done = completedCount();
+  const pct = Math.round(done/total*100);
+  const standalone = window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches;
+
+  let banner = '';
+  if(!standalone && !state.bannerDismissed){
+    banner = `<div class="banner">
+      <button class="close" onclick="dismissBanner()">✕</button>
+      <strong>Instala esta app en tu iPhone:</strong> toca el botón Compartir de Safari (el cuadrado con la flecha ⬆️) y elige <b>“Añadir a pantalla de inicio”</b>. Así se abre como una app y guarda tu progreso.
+    </div>`;
+  }
+
+  let nextCard;
+  if(state.level===null){
+    nextCard = `
+      <div class="card">
+        <div class="row"><span class="level-badge">Paso 1</span></div>
+        <h2 style="margin-top:12px">Prueba de referencia</h2>
+        <p>Antes de armar tu plan necesitamos saber de dónde partes. Es una prueba corta y sin presión: caminas, trotas lo que puedas cómodamente, y caminas de nuevo. Con eso ajustamos todo el plan a tu nivel real.</p>
+        <button class="btn btn-primary" onclick="go('baseline')">Empezar prueba de referencia</button>
+      </div>`;
+  } else {
+    const ns = nextSession();
+    if(ns){
+      const st = sessionStatus(ns);
+      nextCard = `
+        <div class="card">
+          <div class="row"><span class="pill pill-${st}">${st==='today'?'Hoy':st==='missed'?'Atrasada':'Próxima'}</span>
+          <span style="font-size:12.5px;color:var(--text-secondary)">${fmtDate(ns.date)}</span></div>
+          <h2 style="margin-top:12px">${sessionTitle(ns)}</h2>
+          <p>${ns.workout.label}</p>
+          <button class="btn btn-orange" onclick="startWorkout(${ns.id})">Empezar sesión</button>
+        </div>`;
+    } else {
+      nextCard = `<div class="card"><h2 style="margin-top:0">¡Plan completo! 🎉</h2><p>Ya hiciste las ${total} sesiones. Ahora solo falta disfrutar la carrera.</p></div>`;
+    }
+  }
+
+  return `
+    ${banner}
+    <div class="card">
+      <div class="hero-days">${days>=0?days:0}</div>
+      <div class="hero-sub">días para la ${RACE_LABEL} — domingo 27 de sep. 2026</div>
+      <div style="margin-top:14px" class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+      <div class="hero-sub" style="margin-top:6px">${done} de ${total} sesiones completadas</div>
+    </div>
+    ${nextCard}
+    <div class="card">
+      <h2 style="margin-top:0">Método corre-camina</h2>
+      <p>Todo el plan usa intervalos de correr y caminar (método Galloway). No es “hacer trampa”: es la forma más segura de pasar de cero a 5K sin lesionarte, y puedes usarlo incluso el día de la carrera para mantener un ritmo parejo hasta la meta.</p>
+    </div>
+    <div class="card">
+      <p style="margin:0;font-size:12.5px">Esta guía es orientativa y no reemplaza consejo médico. Si tienes alguna condición de salud, consulta a tu médico antes de empezar.</p>
+    </div>
+  `;
+}
+function dismissBanner(){ state.bannerDismissed = true; saveState(); render(); }
+
+/* ---------------------------------------------------------------
+   RENDER: PLAN
+--------------------------------------------------------------- */
+function sessionTitle(s){
+  if(s.kind==='baseline') return 'Prueba de referencia';
+  if(s.kind==='shakeout') return 'Trote suave pre-carrera';
+  return 'Sesión de entrenamiento';
+}
+function fmtDate(dstr){
+  const d = parseLocal(dstr);
+  return `${WEEKDAY[d.getDay()]} ${d.getDate()} ${MONTH[d.getMonth()]}`;
+}
+function renderPlan(){
+  if(state.level===null){
+    return `<div class="card">
+      <h2 style="margin-top:0">Todavía no tienes plan</h2>
+      <p>Haz primero la prueba de referencia de 15-20 minutos. Con tu resultado generamos las 18 sesiones (6 semanas) hasta el día de la carrera.</p>
+      <button class="btn btn-primary" onclick="go('baseline')">Empezar prueba de referencia</button>
+    </div>`;
+  }
+  const plan = fullPlan();
+  let html = `<div class="card" style="padding:12px 16px">
+    <div class="row"><span style="font-size:13px;color:var(--text-secondary)">Tu nivel</span><span class="level-badge">${levelLabel(state.level)}</span></div>
+  </div>`;
+  let lastWeek = null;
+  plan.forEach(s=>{
+    if(s.week !== lastWeek){ html += `<div class="week-header">${WEEK_LABELS[s.week]}</div>`; lastWeek = s.week; }
+    const st = sessionStatus(s);
+    const d = parseLocal(s.date);
+    html += `<div class="card" style="padding:2px 14px" onclick="openSession(${s.id})">
+      <div class="session-row" style="cursor:pointer">
+        <div class="session-date"><div class="d">${d.getDate()}</div><div class="m">${MONTH[d.getMonth()]}</div></div>
+        <div class="session-info">
+          <div class="session-title">${sessionTitle(s)}</div>
+          <div class="session-label">${s.workout.label}</div>
+        </div>
+        <span class="pill pill-${st}">${({done:'Hecha',today:'Hoy',missed:'Atrasada',upcoming:'—'})[st]}</span>
+      </div>
+    </div>`;
+  });
+  html += `<div class="week-header">Día de la carrera</div>
+    <div class="card">
+      <div class="session-row" style="border:none;padding:2px 0">
+        <div class="session-date"><div class="d">27</div><div class="m">sep</div></div>
+        <div class="session-info">
+          <div class="session-title">${RACE_LABEL}</div>
+          <div class="session-label">Ritmo parejo, disfruta el recorrido 🌹</div>
+        </div>
+      </div>
+      <p style="margin-top:8px">Sal más despacio de lo que crees, usa intervalos corre-camina si lo necesitas, y camina los puestos de hidratación. La meta es cruzar la meta, no el tiempo.</p>
+    </div>`;
+  return html;
+}
+function openSession(id){
+  const s = fullPlan().find(x=>x.id===id);
+  if(!s) return;
+  if(s.kind==='baseline'){ go('baseline'); return; }
+  startWorkout(id);
+}
+
+/* ---------------------------------------------------------------
+   RENDER: SETTINGS
+--------------------------------------------------------------- */
+function renderSettings(){
+  return `
+  <div class="card">
+    <div class="row"><span>Sonido de intervalos</span>
+      <button class="toggle ${state.soundOn?'on':''}" onclick="toggleSound()"><span class="knob"></span></button>
+    </div>
+  </div>
+  <div class="card">
+    <h2 style="margin-top:0">Instalar en tu iPhone</h2>
+    <p>1. Abre este archivo en <b>Safari</b> (no en la app de Archivos ni en Correo).<br>
+       2. Toca el ícono de Compartir (cuadrado con flecha hacia arriba).<br>
+       3. Elige <b>“Añadir a pantalla de inicio”</b>.<br>
+       4. Ábrela desde el ícono nuevo — se ve y se siente como una app, y guarda tu progreso en el teléfono.</p>
+  </div>
+  <div class="card">
+    <h2 style="margin-top:0">Tu prueba de referencia</h2>
+    <p>${state.baselineSeconds!=null ? ('Corriste '+fmtMinSec(state.baselineSeconds)+' seguidos → '+levelLabel(state.level)) : 'Aún no la has hecho.'}</p>
+    <button class="btn btn-secondary" onclick="go('baseline')">${state.baselineSeconds!=null?'Repetir prueba':'Hacer prueba'}</button>
+  </div>
+  <div class="card">
+    <h2 style="margin-top:0">Reiniciar</h2>
+    <p>Borra tu progreso y prueba de referencia para empezar de nuevo.</p>
+    <button class="btn btn-secondary" onclick="resetAll()">Borrar todo mi progreso</button>
+  </div>
+  <div class="card"><p style="margin:0;font-size:12px">Rosas 5K Coach · plan generado para la Carrera de las Rosas, Medellín, 27 sep 2026. No es consejo médico.</p></div>
+  `;
+}
+function toggleSound(){ state.soundOn = !state.soundOn; saveState(); render(); }
+function resetAll(){
+  if(!confirm('¿Seguro que quieres borrar todo tu progreso y empezar de cero?')) return;
+  state = {baselineSeconds:null, level:null, completed:{}, soundOn:true, bannerDismissed:true};
+  saveState(); go('home');
+}
+function fmtMinSec(total){
+  const m = Math.floor(total/60), s = total%60;
+  return m+':'+String(s).padStart(2,'0');
+}
+
+/* ---------------------------------------------------------------
+   BASELINE TEST FLOW
+--------------------------------------------------------------- */
+let baseline = { phase:'intro', remaining:300, stopwatch:0, timer:null };
+
+function renderBaseline(){
+  const b = baseline;
+  let body = '';
+  if(b.phase==='intro'){
+    body = `
+      <div class="wk-body idle">
+        <div class="wk-phase-label" style="color:var(--text-primary)">Prueba de referencia</div>
+        <p style="max-width:300px">1. Camina 5 minutos para calentar.<br>2. Trota a un ritmo cómodo (deberías poder hablar) hasta que necesites caminar — tú decides cuándo parar.<br>3. Camina 5 minutos para enfriar.</p>
+        <p style="max-width:300px">Sostén el teléfono o guárdalo donde puedas tocarlo. Te avisamos con sonido cuando cambie cada etapa.</p>
+      </div>
+      <div class="wk-controls idle">
+        <button onclick="go('home')">Cancelar</button>
+        <button class="stop" onclick="startBaselineWarmup()">Empezar calentamiento</button>
+      </div>
+      <div style="text-align:center;padding-bottom:16px">
+        <button class="btn-ghost" style="width:auto;background:none;border:none;font-size:13px" onclick="manualEntry()">¿Ya sabes cuánto aguantaste? Ingrésalo manualmente</button>
+      </div>`;
+    return shellWorkout('idle','Prueba de referencia', body, true);
+  }
+  if(b.phase==='warmup' || b.phase==='cooldown'){
+    const label = b.phase==='warmup' ? 'Calentamiento — camina' : 'Enfriamiento — camina';
+    body = `<div class="wk-body">
+      <div class="wk-phase-label">${label}</div>
+      <div class="wk-timer">${fmtMinSec(b.remaining)}</div>
+      <div class="wk-next">${b.phase==='warmup'?'Luego: trota a tu ritmo':'¡Sesión terminada!'}</div>
+    </div>
+    <div class="wk-controls">
+      <button onclick="skipBaselinePhase()">Saltar</button>
+      <button onclick="exitBaseline()">Salir</button>
+    </div>`;
+    return shellWorkout('walk', label, body, false);
+  }
+  if(b.phase==='run'){
+    body = `<div class="wk-body">
+      <div class="wk-phase-label">Trotando — a tu ritmo</div>
+      <div class="wk-timer">${fmtMinSec(b.stopwatch)}</div>
+      <div class="stopwatch-hint">Cuando sientas que necesitas caminar, toca el botón. No hay meta que cumplir: esto solo mide tu punto de partida.</div>
+    </div>
+    <div class="wk-controls">
+      <button class="stop" style="flex:1" onclick="stopBaselineRun()">Necesito caminar</button>
+    </div>`;
+    return shellWorkout('run', 'Trotando', body, false);
+  }
+  if(b.phase==='results'){
+    const level = levelFromSeconds(b.stopwatch);
+    body = `<div class="wk-body idle">
+      <div class="wk-phase-label" style="color:var(--text-primary)">¡Buen trabajo! 🎉</div>
+      <div class="wk-timer" style="color:var(--text-primary)">${fmtMinSec(b.stopwatch)}</div>
+      <div class="hero-sub">trotaste seguido</div>
+      <p style="max-width:300px;margin-top:16px"><span class="level-badge">${levelLabel(level)}</span></p>
+      <p style="max-width:300px">Con esto armamos tus 18 sesiones (3 por semana) hasta el 27 de septiembre, ajustadas a tu punto de partida real.</p>
+    </div>
+    <div class="wk-controls idle">
+      <button class="stop" style="flex:1" onclick="saveBaseline(${b.stopwatch})">Generar mi plan</button>
+    </div>`;
+    return shellWorkout('idle', 'Resultado', body, true);
+  }
+  return '';
+}
+function shellWorkout(mode, title, body, idleTop){
+  return `<div class="workout-screen ${mode}">
+    <div class="wk-top ${idleTop?'idle-top':''}"><span class="wk-title">${title}</span><span></span></div>
+    ${body}
+  </div>`;
+}
+function startBaselineWarmup(){
+  baseline = {phase:'warmup', remaining:300, stopwatch:0, timer:null};
+  requestWakeLock(); cueWalk(); render(); tickBaseline();
+}
+function tickBaseline(){
+  clearInterval(baseline.timer);
+  baseline.timer = setInterval(()=>{
+    const b = baseline;
+    if(b.phase==='warmup' || b.phase==='cooldown'){
+      b.remaining--;
+      if(b.remaining<=3 && b.remaining>0) cueTick();
+      if(b.remaining<=0){
+        clearInterval(b.timer);
+        if(b.phase==='warmup'){ b.phase='run'; b.stopwatch=0; cueRun(); render(); tickBaseline(); return; }
+        else { b.phase='results'; cueDone(); releaseWakeLock(); render(); return; }
+      }
+      render();
+    } else if(b.phase==='run'){
+      b.stopwatch++;
+      render();
+    }
+  },1000);
+}
+function skipBaselinePhase(){
+  const b = baseline;
+  clearInterval(b.timer);
+  if(b.phase==='warmup'){ b.phase='run'; b.stopwatch=0; cueRun(); render(); tickBaseline(); }
+  else if(b.phase==='cooldown'){ b.phase='results'; cueDone(); releaseWakeLock(); render(); }
+}
+function stopBaselineRun(){
+  clearInterval(baseline.timer);
+  baseline.phase='cooldown'; baseline.remaining=300;
+  cueWalk(); render(); tickBaseline();
+}
+function exitBaseline(){
+  clearInterval(baseline.timer); releaseWakeLock();
+  baseline = {phase:'intro',remaining:300,stopwatch:0,timer:null};
+  go('home');
+}
+function manualEntry(){
+  const val = prompt('¿Cuántos minutos y segundos aguantaste trotando seguido? Escribe solo minutos (ej: 3.5 para 3 min 30s):');
+  if(val===null) return;
+  const mins = parseFloat(val.replace(',','.'));
+  if(isNaN(mins) || mins<0){ alert('Ingresa un número válido de minutos.'); return; }
+  saveBaseline(Math.round(mins*60));
+}
+function saveBaseline(seconds){
+  state.baselineSeconds = seconds;
+  state.level = levelFromSeconds(seconds);
+  state.completed[1] = true;
+  saveState();
+  clearInterval(baseline.timer); releaseWakeLock();
+  baseline = {phase:'intro',remaining:300,stopwatch:0,timer:null};
+  go('plan');
+}
+
+/* ---------------------------------------------------------------
+   WORKOUT PLAYER (regular sessions)
+--------------------------------------------------------------- */
+function buildPhases(workout){
+  const phases = [{type:'walk', dur:300, label:'Calentamiento — camina'}];
+  for(let i=0;i<workout.reps;i++){
+    phases.push({type:'run', dur:workout.run, label:`Corre ${i+1}/${workout.reps}`});
+    if(i < workout.reps-1) phases.push({type:'walk', dur:workout.walk, label:`Camina ${i+1}/${workout.reps}`});
+  }
+  phases.push({type:'walk', dur:300, label:'Enfriamiento — camina'});
+  return phases;
+}
+function startWorkout(sessionId){
+  const s = fullPlan().find(x=>x.id===sessionId);
+  if(!s) return;
+  activeSessionId = sessionId;
+  const phases = buildPhases(s.workout);
+  engine = { phases, idx:0, remaining:phases[0].dur, paused:false, timer:null, done:false };
+  requestWakeLock();
+  cueWalk();
+  go('workout');
+  tickWorkout();
+}
+function currentSession(){ return fullPlan().find(x=>x.id===activeSessionId); }
+function renderWorkout(){
+  if(!engine) return '';
+  const s = currentSession();
+  const ph = engine.phases[engine.idx];
+  if(engine.done){
+    return shellWorkout('idle','Sesión completa', `
+      <div class="wk-body idle">
+        <div class="wk-phase-label" style="color:var(--text-primary)">¡Sesión completada! 🌹</div>
+        <p style="max-width:280px">${s?s.workout.label:''}</p>
+      </div>
+      <div class="wk-controls idle"><button class="stop" style="flex:1" onclick="finishWorkout()">Volver al plan</button></div>
+    `, true);
+  }
+  const totalReps = s.workout.reps;
+  const repNum = ph.label.match(/(\d+)\//);
+  const dots = totalReps>1 ? `<div class="wk-dots">${Array.from({length:totalReps}).map((_,i)=>{
+      const n = i+1;
+      const doneRep = repNum ? n < parseInt(repNum[1]) || (n===parseInt(repNum[1]) && ph.type==='walk') : false;
+      return `<span class="wk-dot ${doneRep?'done':''}"></span>`;
+    }).join('')}</div>` : '';
+  const nextPh = engine.phases[engine.idx+1];
+  return shellWorkout(ph.type, sessionTitle(s), `
+    <div class="wk-body">
+      <div class="wk-phase-label">${ph.label}</div>
+      <div class="wk-timer">${fmtMinSec(engine.remaining)}</div>
+      ${nextPh?`<div class="wk-next">Sigue: ${nextPh.label}</div>`:''}
+      ${dots}
+    </div>
+    <div class="wk-controls">
+      <button onclick="pauseWorkout()">${engine.paused?'Reanudar':'Pausar'}</button>
+      <button onclick="skipPhase()">Saltar</button>
+      <button onclick="exitWorkout()">Salir</button>
+    </div>
+  `, false);
+}
+function tickWorkout(){
+  clearInterval(engine.timer);
+  engine.timer = setInterval(()=>{
+    if(engine.paused) return;
+    engine.remaining--;
+    if(engine.remaining<=3 && engine.remaining>0) cueTick();
+    if(engine.remaining<=0){
+      advancePhase();
+    } else {
+      render();
+    }
+  },1000);
+}
+function advancePhase(){
+  engine.idx++;
+  if(engine.idx >= engine.phases.length){
+    clearInterval(engine.timer);
+    engine.done = true;
+    cueDone(); vib([200,80,200,80,200]);
+    releaseWakeLock();
+    state.completed[activeSessionId] = true;
+    saveState();
+    render();
+    return;
+  }
+  const ph = engine.phases[engine.idx];
+  engine.remaining = ph.dur;
+  if(ph.type==='run') cueRun(); else cueWalk();
+  render();
+}
+function pauseWorkout(){ engine.paused = !engine.paused; render(); }
+function skipPhase(){ advancePhase(); }
+function exitWorkout(){
+  if(!confirm('¿Salir de la sesión? Se perderá el progreso de hoy.')) return;
+  clearInterval(engine.timer); releaseWakeLock();
+  engine = null; activeSessionId = null;
+  go('plan');
+}
+function finishWorkout(){
+  engine = null; activeSessionId = null;
+  go('plan');
+}
+
+/* ---------------------------------------------------------------
+   INIT
+--------------------------------------------------------------- */
+render();
+</script>
+</body>
+</html>
